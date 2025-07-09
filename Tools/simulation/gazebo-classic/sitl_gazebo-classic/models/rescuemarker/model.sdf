@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="rescuemarker">
+    <static>true</static> <!-- Set to true if the object should not move -->
+    <link name="rescuemarker_link">
+      <inertial>
+        <mass>0.1</mass> <!-- Minimal mass, adjust if it needs physics interaction -->
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <visual name="rescuemarker_visual">
+        <geometry>
+          <mesh>
+            <!--
+              The URI path should be relative to where your model.sdf file is located.
+              If the DAE and texture are in the same folder as the SDF, it's just the filename.
+            -->
+            <uri>model://rescuemarker/meshes/square.dae</uri>
+            <scale>1 1 1</scale> <!-- Adjust scale if needed -->
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>true</lighting> <!-- Enable or disable lighting effects on the texture -->
+          <script>
+            <!--
+              Gazebo can sometimes load textures directly via material scripts,
+              but the DAE approach is more robust for complex models.
+              This section is optional if the DAE fully defines the texture.
+              If you wanted to define a simple colored material here instead:
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            -->
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

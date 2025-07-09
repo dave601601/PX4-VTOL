@@ -1,0 +1,14 @@
+material Texturee
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture model://rescuemarker/materials/textures/rescuemarker.png
+      }
+    }
+  }
+}

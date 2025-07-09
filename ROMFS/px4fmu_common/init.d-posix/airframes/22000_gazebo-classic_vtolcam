@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# @name Standard VTOL CAM
+#
+# @type Standard VTOL
+#
+
+. ${R}etc/init.d-posix/airframes/1040_gazebo-classic_standard_vtol
